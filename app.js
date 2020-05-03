@@ -1,13 +1,11 @@
 
 class User {
 
-    constructor(nickname, id) {
+    constructor(nickname) {
         this.nickname = nickname;
-        this.id = this.createUniqueId();
+        this.id = Math.random().toString(36).substr(2, 9);
     }
-    createUniqueId() {
-        return Math.random().toString(36).substr(2, 9);
-    }
+
 
     changeNickname(newNick) {
         this.nickname = newNick;
